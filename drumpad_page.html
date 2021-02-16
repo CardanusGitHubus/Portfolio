@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Drumpad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/drumpad.js"></script>
+</head>
+
+<body>
+	<header>
+    <div class="header-wrapper">
+      <ul class="header-menu">
+        <li class="header-menu-item"><a href="index.html">Home</a></li>
+        <li class="header-menu-item"><a href="">About</a></li>
+        <li class="header-menu-item header-dropdown-menu">
+        	<a href="">Projects</a>
+        	<div class="header-dropdown-content">
+        		<a href="#">Drumpad</a>
+        		<a href="tic-tac-toe.html">Tic-Tac-Toe</a>
+        		<a href="">Three</a>
+        		<a href="">Four</a>
+        	</div>
+        </li>
+        <li class="header-menu-item"><a href="">Other</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="drum-kit">
+    <!-- data-keys: Numpad0:96 NumpadDecimal:110 Numpad1:97 Numpad2:98 Numpad3:99 Numpad4:100 Numpad5:101 Numpad6:102 Numpad7:103 Numpad8:104 Numpad9:105 NumpadDivide:111 NumpadMultiply:106 NumpadSubtract:109 NumpadAdd:107 NumpadEnter:13 -->
+    <div class="keys">
+      <div data-key="1" class="key">
+        <kbd>1</kbd>
+        <span class="sound">clap</span>
+      </div>
+      <div data-key="2" class="key">
+        <kbd>2</kbd>
+        <span class="sound">hihat</span>
+      </div>
+      <div data-key="3" class="key">
+        <kbd>3</kbd>
+        <span class="sound">kick</span>
+      </div>
+      <div data-key="4" class="key">
+        <kbd>4</kbd>
+        <span class="sound">openhat</span>
+      </div>
+      <div data-key="5" class="key">
+        <kbd>5</kbd>
+        <span class="sound">boom</span>
+      </div>
+      <div data-key="6" class="key">
+        <kbd>6</kbd>
+        <span class="sound">ride</span>
+      </div>
+      <div data-key="7" class="key">
+        <kbd>7</kbd>
+        <span class="sound">snare</span>
+      </div>
+      <div data-key="8" class="key">
+        <kbd>8</kbd>
+        <span class="sound">tom</span>
+      </div>
+      <div data-key="9" class="key">
+        <kbd>9</kbd>
+        <span class="sound">tink</span>
+      </div>
+      <audio data-key="1" src="sounds/clap.wav"></audio>
+      <audio data-key="2" src="sounds/hihat.wav"></audio>
+      <audio data-key="3" src="sounds/kick.wav"></audio>
+      <audio data-key="4" src="sounds/openhat.wav"></audio>
+      <audio data-key="5" src="sounds/boom.wav"></audio>
+      <audio data-key="6" src="sounds/ride.wav"></audio>
+      <audio data-key="7" src="sounds/snare.wav"></audio>
+      <audio data-key="8" src="sounds/tom.wav"></audio>
+      <audio data-key="9" src="sounds/tink.wav"></audio>
+    </div>
+  </section>
+</body>
+
+</html>
