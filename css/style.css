@@ -1,4 +1,3 @@
-
 /*================index================*/
 body {
 	font-family: sans-serif;
@@ -11,7 +10,7 @@ body {
 .header-menu {
 	font-size: 1.2rem;
 	display: flex;
- 	justify-content: center;
+	justify-content: center;
 	list-style: none;
 	/*margin: auto;*/
 }
@@ -31,7 +30,7 @@ body {
 	position: absolute;
 	top: 30px;
 	display: none;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .header-dropdown-content a {
@@ -45,6 +44,7 @@ body {
 
 .header-dropdown-menu:before,
 .header-dropdown-menu:after {
+	transition: .4s;
 	content: '';
 	width: 10px;
 	height: 2px;
@@ -65,6 +65,14 @@ body {
 
 .header-dropdown-menu:hover .header-dropdown-content {
 	display: block;
+}
+
+.header-dropdown-menu:hover:before {
+	transform: rotate(-45deg);
+}
+
+.header-dropdown-menu:hover:after {
+	transform: rotate(45deg);
 }
 
 
@@ -101,16 +109,16 @@ body {
 	padding: 10px;
 	margin: 10px;
 	text-align: center;
-  /*font-size: 1.5rem;*/
-  transition: all .07s ease;
-  /*width: 10rem;*/
-  /*background: rgba(0,0,0,0.4);*/
+	/*font-size: 1.5rem;*/
+	transition: all .07s ease;
+	/*width: 10rem;*/
+	/*background: rgba(0,0,0,0.4);*/
 }
 
 .playing {
-  transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+	transform: scale(1.1);
+	border-color: #ffc600;
+	box-shadow: 0 0 1rem #ffc600;
 }
 
 .sound {
@@ -127,7 +135,7 @@ body {
 .options {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: flex-end;
 	width: 303px;
 	height: 100px;
 	margin: 0px auto;
@@ -135,21 +143,43 @@ body {
 }
 
 .options button {
-	width: 49%;
+	width: 45%;
 	height: 50px;
 	font-size: 1.2rem;
 	border-style: none;
+	outline: none;
 	background: white;
 	text-transform: uppercase;
 	cursor: pointer;
 }
 
 .options button:hover {
-	/*color: #7D7D7D;*/
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	color: #7D7D7D;
+	/*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
 }
 
-#win {
+.ai-btn {
+	position: relative;
+}
+
+.ai-btn:after {
+	transition: .4s;
+	content: '';
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border: 2px solid #000;
+	border-radius: 50%;
+	position: absolute;
+	top: 16px;
+	left: -28px;
+}
+
+.botEnabled:after {
+	background-color: #000;
+}
+
+.win {
 	box-sizing: border-box;
 	transition: 0.4s;
 	width: 303px;
@@ -168,12 +198,12 @@ body {
 	align-items: center;
 	width: 303px;
 	margin: 0px auto;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .cell {
 	position: relative;
-/*	cursor: default;*/
+	/*	cursor: default;*/
 	z-index: 1;
 	box-sizing: border-box;
 	width: 100px;
@@ -183,11 +213,11 @@ body {
 	/*padding: 0.5px;*/
 	margin: 0.5px;
 	text-align: center;
-  /*font-size: 1.5rem;*/
-  transition: all .07s ease;
-  /*width: 10rem;*/
-  /*background: rgba(0,0,0,0.4);*/
-  cursor: pointer;
+	/*font-size: 1.5rem;*/
+	transition: all .07s ease;
+	/*width: 10rem;*/
+	/*background: rgba(0,0,0,0.4);*/
+	cursor: pointer;
 }
 
 .line1,
@@ -219,7 +249,8 @@ body {
 	left: 47px;
 }
 
-.line1.active, .line2.active {
+.line1.active,
+.line2.active {
 	width: 80px;
 	background: black;
 	top: 50px;
@@ -236,4 +267,4 @@ body {
 
 
 
-	background: #37E364;
+background: #37E364;

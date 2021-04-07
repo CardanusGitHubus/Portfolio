@@ -1,5 +1,5 @@
 let fieldArr = Array.from(document.getElementsByClassName('cell'));
-let winNode = document.getElementById('win');
+let winNode = document.querySelector('.win');
 let aiNode = document.querySelector('.ai-btn');
 let newGameNode = document.querySelector('.new-game-btn');
 
